@@ -1,4 +1,4 @@
-package com.cognizant.authorizationmicroservice.Services.JWT;
+package com.cognizant.authorizationmicroservice.services.jwt;
 
 import java.util.Date;
 

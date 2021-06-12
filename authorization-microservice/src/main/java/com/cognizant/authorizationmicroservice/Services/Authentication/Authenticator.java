@@ -1,8 +1,8 @@
-package com.cognizant.authorizationmicroservice.Services.Authentication;
+package com.cognizant.authorizationmicroservice.services.authentication;
 
-import com.cognizant.authorizationmicroservice.Exceptions.InvalidCredentials;
-import com.cognizant.authorizationmicroservice.Services.UserVerification;
-import com.cognizant.authorizationmicroservice.Services.JWT.TokenGenerator;
+import com.cognizant.authorizationmicroservice.services.UserVerification;
+import com.cognizant.authorizationmicroservice.services.authentication.exceptions.InvalidCredentials;
+import com.cognizant.authorizationmicroservice.services.jwt.TokenGenerator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

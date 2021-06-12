@@ -1,11 +1,11 @@
-package com.cognizant.authorizationmicroservice.Services;
+package com.cognizant.authorizationmicroservice.services;
 
 import java.util.List;
 
-import com.cognizant.authorizationmicroservice.Exceptions.InvalidCredentials;
-import com.cognizant.authorizationmicroservice.Models.User;
-import com.cognizant.authorizationmicroservice.Repository.UserRepo;
-import com.cognizant.authorizationmicroservice.Services.JWT.TokenGenerator;
+import com.cognizant.authorizationmicroservice.services.jwt.TokenGenerator;
+import com.cognizant.authorizationmicroservice.models.User;
+import com.cognizant.authorizationmicroservice.repository.UserRepo;
+import com.cognizant.authorizationmicroservice.services.authentication.exceptions.InvalidCredentials;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

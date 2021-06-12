@@ -1,16 +1,12 @@
-package com.cognizant.authorizationmicroservice.Models;
+package com.cognizant.authorizationmicroservice.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 public class AuthRequest {
     
+    public AuthRequest(String string, String string2) {
+    }
     String userName;
     String password;
     

@@ -1,8 +1,8 @@
-package com.cognizant.authorizationmicroservice.Repository;
+package com.cognizant.authorizationmicroservice.repository;
 
 import java.util.List;
 
-import com.cognizant.authorizationmicroservice.Models.User;
+import com.cognizant.authorizationmicroservice.models.User;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

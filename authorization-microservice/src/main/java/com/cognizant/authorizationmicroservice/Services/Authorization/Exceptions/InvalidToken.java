@@ -1,4 +1,4 @@
-package com.cognizant.authorizationmicroservice.Services.Authorization.Exceptions;
+package com.cognizant.authorizationmicroservice.services.authorization.exceptions;
 
 public class InvalidToken extends Exception{
 

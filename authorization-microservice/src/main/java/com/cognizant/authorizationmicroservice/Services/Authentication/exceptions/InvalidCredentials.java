@@ -1,4 +1,4 @@
-package com.cognizant.authorizationmicroservice.Exceptions;
+package com.cognizant.authorizationmicroservice.services.authentication.exceptions;
 
 public class InvalidCredentials extends Exception {
     

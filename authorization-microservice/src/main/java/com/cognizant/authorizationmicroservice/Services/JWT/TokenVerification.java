@@ -1,11 +1,10 @@
-package com.cognizant.authorizationmicroservice.Services.JWT;
+package com.cognizant.authorizationmicroservice.services.jwt;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.auth0.jwt.interfaces.DecodedJWT;
-import com.cognizant.authorizationmicroservice.Services.Authorization.Exceptions.InvalidToken;
+import com.cognizant.authorizationmicroservice.services.authorization.exceptions.InvalidToken;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,13 +29,8 @@ public class TokenVerification {
                                     .withSubject(userName)
                                     .build();
             // @SuppressWarnings
-            DecodedJWT tokenJwt = JWT.decode(token);
-            LOGGER.info(String.format("Token ID: %s , User ID: %s", tokenJwt.getKeyId(), userId));
-            LOGGER.info(String.format("Token Subject: %s , UserName: %s", tokenJwt.getSubject(), userName));
-            
-            DecodedJWT jwt = verifier.verify(token);
+            verifier.verify(token);
         } catch (JWTVerificationException e) {
-            LOGGER.info(e.toString());
             throw new InvalidToken(e.getMessage());
         }
         return true;
