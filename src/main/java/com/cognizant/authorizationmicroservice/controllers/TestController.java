@@ -17,12 +17,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AddUserController {
+public class TestController {
     
     @Autowired
     UserRepo userRepo;
-    public static final Logger LOGGER = LoggerFactory.getLogger(AddUserController.class);
+    public static final Logger LOGGER = LoggerFactory.getLogger(TestController.class);
 
+    @GetMapping(path = "/health")
+	public ResponseEntity<?> healthCheckup() {
+		LOGGER.info("AWS Health Check ");
+		return new ResponseEntity<>("", HttpStatus.OK);
+	}
+    
     @PostMapping(path = "/addUser")
     public ResponseEntity<User> addUser(@RequestBody User userDetails) {
 
