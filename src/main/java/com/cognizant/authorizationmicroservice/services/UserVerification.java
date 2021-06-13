@@ -18,7 +18,7 @@ public class UserVerification {
     @Autowired
     TokenGenerator tokenGenerator;
 
-    public String verifyUser(String userName, String password) throws InvalidCredentials{
+    public Long verifyUser(String userName, String password) throws InvalidCredentials{
         List<User> usersList = userRepo.findByUserName(userName);
         if(usersList.isEmpty()){
             throw new InvalidCredentials(String.format("User: %s NOT FOUND", userName));

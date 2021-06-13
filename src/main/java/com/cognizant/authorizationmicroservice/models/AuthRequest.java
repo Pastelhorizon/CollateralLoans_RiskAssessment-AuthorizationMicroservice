@@ -1,13 +1,32 @@
 package com.cognizant.authorizationmicroservice.models;
 
-import lombok.Data;
+//import lombok.Data;
 
-@Data
+//@Data
 public class AuthRequest {
     
-    public AuthRequest(String string, String string2) {
+ 
+    public AuthRequest() {
+    	super();
     }
-    String userName;
+    public AuthRequest(String userName, String password) {
+		super();
+		this.userName = userName;
+		this.password = password;
+	}
+	String userName;
     String password;
+    public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
     
 }

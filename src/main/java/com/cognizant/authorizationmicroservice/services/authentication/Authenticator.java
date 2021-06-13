@@ -16,9 +16,9 @@ public class Authenticator {
     @Autowired
     TokenGenerator tokenGenerator;
     public String authenticate(String userName, String password) throws InvalidCredentials{
-        String userId = userVerification.verifyUser(userName, password);
-        if(!(userId.isEmpty())){
-            return tokenGenerator.generateToken(userName, userId);
+        Long userId = userVerification.verifyUser(userName, password);
+        if(userId != null){
+            return tokenGenerator.generateToken(userName, Long.toString(userId));
         }
         else{
             return "";

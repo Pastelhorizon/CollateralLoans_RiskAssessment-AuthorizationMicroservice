@@ -1,12 +1,27 @@
 package com.cognizant.authorizationmicroservice.models;
 
-import lombok.Data;
+//import lombok.Data;
 
-@Data
+//@Data
 public class AuthResponse {
-    String token;
-
     public AuthResponse(String token) {
-        this.token = token;
-    }
+		super();
+		this.token = token;
+	}
+
+	String token;
+
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
+	}
+
+	public AuthResponse() {
+		super();
+	}
+
+    
 }

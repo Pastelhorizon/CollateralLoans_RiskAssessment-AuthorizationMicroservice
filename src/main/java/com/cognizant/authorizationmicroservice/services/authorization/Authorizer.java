@@ -27,10 +27,10 @@ public class Authorizer {
     public boolean isValid(String token) throws InvalidToken{
         
         DecodedJWT jwt = JWT.decode(token);
-        String userId = jwt.getKeyId();
+        Long userId = Long.parseLong(jwt.getKeyId());
         Optional<User> user = userRepo.findById(userId);
         if(user.isPresent() && user.get().getUserName().equals(jwt.getSubject())){
-            if(tokenVerification.verifyToken(token, user.get().getUserId(), user.get().getUserName())){
+            if(tokenVerification.verifyToken(token, user.get().getUserId().toString(), user.get().getUserName())){
                 return true;
             }
             
