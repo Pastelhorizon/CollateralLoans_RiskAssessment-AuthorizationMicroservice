@@ -1,13 +1,13 @@
 package com.cognizant.authorizationmicroservice.controllers;
 
-import com.cognizant.authorizationmicroservice.models.AuthRequest;
-import com.cognizant.authorizationmicroservice.models.AuthResponse;
+// import com.cognizant.authorizationmicroservice.models.AuthRequest;
+// import com.cognizant.authorizationmicroservice.models.AuthResponse;
 import com.cognizant.authorizationmicroservice.services.jwt.TokenGenerator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+// import org.springframework.http.HttpStatus;
+// import org.springframework.http.ResponseEntity;
 
 public class ControllerTest {
 
