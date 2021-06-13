@@ -16,4 +16,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/authentication_microservice.jar
+    - target/authorization_microservice.jar
